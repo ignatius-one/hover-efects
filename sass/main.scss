@@ -1,0 +1,49 @@
+
+
+@import 'botonesAfter';
+@import 'textumg';
+@import 'img';
+@import 'zoomImage';
+
+$blue:#1d3557;
+$white:#f1faee;
+$red:#d00000;
+$bluegood:#0a9396;
+$black:#212529;
+$main:#e8eddf;
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color:$white ;
+    color:$black;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+    &::-webkit-scrollbar-thumb{
+        display: none;
+    }
+}
+main{
+    margin: 0 auto;
+    width: 90%;
+    background-color:$main ;
+}
+@mixin title($color,$size) {
+    font-size: $size;
+    color: $color;
+    text-align: center;
+} 
+h1{
+    @include title($black,1.5625em)
+}
+h2{
+    @include title($black,1.125em)
+}
+
+

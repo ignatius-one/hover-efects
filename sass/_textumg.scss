@@ -1,0 +1,115 @@
+
+$blue:#1d3557;
+$white:#f1faee;
+$red:#d00000;
+$bluegood:#0a9396;
+$black:#212529;
+$main:#e8eddf;
+
+
+.section-img{
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+
+            justify-content: center;
+    -ms-flex-line-pack: center;
+
+        align-content: center;
+    height: 100%;
+    figure{
+        position: relative;
+        width: 31.25em;
+        height: 21.875em;
+        overflow: hidden;
+        border-radius: .75em;
+        -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+                box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+        cursor: pointer;
+       
+        img{
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 500ms ease-out;
+            -o-transition: all 500ms ease-out;
+                transition: all 500ms ease-out;
+        }
+        .text-show{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            color:$white;
+            background-color: rgba(0,0,0,.7);
+            -webkit-transition: all 500ms ease-out;
+            -o-transition: all 500ms ease-out;
+                transition: all 500ms ease-out;
+          
+            opacity: 0;
+            visibility: hidden;
+       
+            padding: .75em;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -ms-flex-line-pack: center;
+                align-content: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+                -ms-flex-flow: column;
+                    flex-flow: column;
+            
+        }
+        h3{
+            -webkit-transition: .5s ease;
+            -o-transition: .5s ease;
+            transition: .5s ease;
+        }
+       
+       &:hover .text-show{
+           opacity: 1;
+           visibility:visible ;
+       }
+       &:hover h3{
+        -webkit-transform: scaleX(1.3);
+            -ms-transform: scaleX(1.3);
+                transform: scaleX(1.3);
+     }
+       &:hover p{
+        -webkit-animation: epic-text .5s;
+                animation: epic-text .5s;
+        @-webkit-keyframes epic-text {
+            0%{
+                -webkit-transform: translateX(100%);
+                        transform: translateX(100%);
+            }
+        }
+        @keyframes epic-text {
+            0%{
+                -webkit-transform: translateX(100%);
+                        transform: translateX(100%);
+            }
+        }
+    }
+    }
+}
+
+//  <section class="section-img">
+//             <figure>
+//                 <img src="./src/vol.jpg" alt="" srcset="">
+//                 <div class="text-show">
+//                     <h3>Hi there!</h3>
+//                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit quis et voluptatum ad! Laborum perspiciatis dolores sit assumenda aperiam cupiditate eius, molestias exercitationem consequuntur excepturi animi repellendus minus mollitia accusantium!</p>
+//                 </div>
+//             </figure>
+//         </section>

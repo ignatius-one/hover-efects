@@ -1,0 +1,60 @@
+
+
+@mixin new-btn($colorb) {
+    width: 11.875em;
+    padding: 1.25em;
+    background-color: transparent;
+    border: 1.5px solid transparent;
+    color: $colorb;
+    border-radius: 4px;
+    text-transform: uppercase;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    &::after{
+        content: '';
+        width: 1.25em;
+        height: 1.25em;
+        border-top: .11875em solid $colorb;
+        border-left: .11875em solid $colorb;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        -webkit-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+    &::before{
+        content: '';
+        width: 1.25em;
+        height: 1.25em;
+        border-bottom: .11875em solid $colorb;
+        border-right: .11875em solid $colorb;
+        position: absolute;
+        left: -1;
+        right: 0;
+        bottom: 0;
+        top: -1;
+        -webkit-transition: .2s all;
+        -o-transition: .2s all;
+        transition: .2s all;
+    }
+    &:hover::after,
+    &:hover::before{
+        width: 12.5em;
+        height: 4.375em;
+    }
+}
+
+// add new elment include 
+
+.btn-efect{
+    @include new-btn(red)
+}
+        //html 
+        // <button class="btn-efect">Hover me</button>
